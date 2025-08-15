@@ -2,24 +2,49 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Perfil do Usuário</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="Bteste-perfil.css" />
 </head>
 <body>
   <div class="container">
-    <h1>Dados do Usuário</h1>
-    <div class="profile-card">
-      <img id="profile-image" src="https://via.placeholder.com/150" alt="Foto de Perfil" />
-      <div class="info">
-        <p><strong>Nome:</strong> <span id="nome">Fulano</span></p>
-        <p><strong>Email:</strong> <span id="email">fulano@email.com</span></p>
-        <p><strong>Telefone:</strong> <span id="telefone">...</span></p>
-        <p><strong>Idade:</strong> <span id="idade">...</span></p>
-      </div>
-     <button onclick="window.location.href='Ateste-edicao.html'">Editar Perfil</button>
+    
+    <div class="profile-view" id="profileView">
+      <h1>
+        <span class="glam">GLAM</span><span class="our">OUR</span>
+      </h1>
+      
+      <img src="https://i.pravatar.cc/150?img=5" alt="Foto de Perfil" id="profilePhoto" class="profile-photo" />
+      <h2 id="profileName"> </h2>
+    <div class="coluna">
+      <p id="profileEmail"> </p>
+      <p id="profileTelefone"> </p>
+      <p id="profileIdade"> </p>
+      <button id="edit-btn">Editar Perfil</button>
     </div>
+  </div>
 
+    
+    <div class="edit-section" id="editSection">
+      <div class="edit-photo-row">
+        <img src="https://i.pravatar.cc/150?img=5" alt="Foto para editar" id="editPhotoPreview" />
+        <div class="info-fields">
+          <label for="nameInput">Nome</label>
+          <input type="text" id="nameInput" placeholder="Seu nome" />
+        </div>
+        <input type="file" id="photoInput" accept="image/*" />
+      </div>
+      <label for="emailInput">Email</label>
+      <input type="email" id="emailInput" placeholder="seu@email.com" />
+      <label for="telefoneInput">Telefone</label>
+      <input type="telefone" id="telefoneInput" placeholder="(00)0 0000-0000" />
+      <label for="idadeInput">Idade</label>
+      <input type="idade" id="idadeInput" aria-placeholder="0" />
+      <div class="button-group">
+        <button id="save-btn">Salvar</button>
+        <button id="cancel-btn">Cancelar</button>
+      </div>
+    </div>
+  </div>
 
   <script src="Cteste-perfil.js"></script>
 </body>
